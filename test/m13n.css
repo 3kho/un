@@ -1,0 +1,273 @@
+html {
+    color: white;
+    background-color: #333333;
+    font-family: sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#main {
+    background-color: #444444;
+    padding: 8px;
+    box-shadow: 0 0 80px #222222;
+    overflow: hidden;
+    position: relative;
+}
+
+button {
+    background: linear-gradient(#dddddd, #999999);
+    border-radius: 4px;
+    border: 1px solid #888888;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    padding: 4px;
+    margin: 1px;
+    
+    position: relative;
+    vertical-align: middle;
+}
+
+button span.icon { 
+    display: none;
+    opacity: 0.75;
+}
+
+button.showIcon span.icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-size: 48px;
+    vertical-align: middle;
+}
+
+button .text {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 48px);
+}
+
+button.engineerClicker span.icon {
+    background-image: url("content/wrench.png");
+}
+
+button.researchClicker span.icon {
+    background-image: url("content/beaker.png");
+}
+
+button.salesClicker span.icon {
+    background-image: url("content/cash.png");
+}
+
+button.resetButton span.icon {
+    background-image: url("content/reset.png");
+}
+
+button:enabled:hover {
+    color: black;
+    border: 1px solid #88ccff;
+    box-shadow: 0 0 6px #88ccff;
+}
+
+button:enabled:hover span.icon {
+    opacity: 1;
+}
+
+button:enabled:active {
+    background: linear-gradient(#888888, #aaaaaa);
+}
+
+button.action, button.toggle {
+    width: 200px;
+    height: 70px;
+    text-align: left;
+    margin-right: 10px;
+    font-size: 90%;
+}
+
+button.hireButton {
+    width: 120px;
+}
+
+button.hireButton .text {
+    max-width: 100%;
+}
+
+button.toggle {
+    width: 90px;
+}
+
+button.resetButton {
+    float: right;
+    clear: right;
+    margin-right: 1px;
+    height: 56px;
+}
+
+.qtyControl button {
+    width: 24px;
+    height: 24px;
+    line-height: 12px;
+}
+
+span.spinnerValue {
+    display: inline-block;
+    min-width: 2em;
+    padding: 0 0.5em;
+    text-align: right;
+}
+
+button .price {
+    display: block;
+    font-size: 75%;
+}
+
+.price.tooMuch {
+    color: red;
+}
+
+.hidden {
+    visibility: hidden !important;
+}
+
+.achievement.hidden {
+    display: none;
+}
+
+.price.hidden {
+    display: none;
+}
+
+.progressBar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.progressBar div {
+    height: 100%;
+    background-color: rgba(0, 128, 255, 0.25);
+}
+
+.display label {
+    font-weight: bold;
+    display: block;
+}
+
+.controlSet > div {
+    display: inline-block;
+}
+
+.controlSet + .display, .display + .display {
+    margin-top: 1em;
+}
+
+.sizeDiagram {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #888888;
+    position: relative;
+    margin-bottom: 1em;
+    border-radius: 100%;
+    float: right;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.sizeDiagram label {
+    position: absolute;
+    right: 0;
+    bottom: -1.5em;
+    font-size: 8pt;
+    text-shadow: 1px 1px 4px black;
+}
+
+.sizeDiagram > div {
+    background-color: #88ccff;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.sizeDiagram > div > div {
+    box-sizing: border-box;
+    border: 1px dashed black;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 100%;
+    
+    align-self: center;
+}
+
+.achievementBox {
+    float: right;
+    clear: right;
+    width: 200px;
+    height: 160px;
+    border: 1px solid #888888;
+}
+
+.achievementBox > div:nth-child(2){
+    overflow-y: auto;
+    height: calc(100% - 1.2em);
+}
+
+.achievementBox .achievement {
+    width: 42px;
+    height: 42px;
+    float: left;
+    margin: 1px;
+    border: 1px solid #666666;
+    box-sizing: border-box;
+    opacity: 0.25;
+    background-size: 100% 100%;
+}
+
+.achievementBox .achievement.earned {
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.achievementBox .achievement:hover {
+    border: 1px solid #88ccff;
+}
+
+.notifier {
+    background-color: #666666;
+    padding: 4px;
+    min-height: 1.25em;
+    margin-top: 20px;
+    font-size: 80%;
+    clear: both;
+}
+
+.notifier .achievementMessage {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+.tooltip {
+    display: none;
+    font-size: 75%;
+    position: absolute;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip h3 {
+    margin-top: 0;
+}
