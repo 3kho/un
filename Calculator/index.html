@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <link rel="icon" sizes="192x192" href="icon.png">
+   <link rel="shortcut icon" href="icon.png" type="image/x-icon"/>
+   <link rel="apple-touch-icon" href="icon.png" type="image/x-icon"/>
+<head>
+   
+<meta name="title" content="Web-based  calculator">
+<meta name="description" content="A fast and easy calculator that is easy to use. Now with Dark mode!">
+<meta content="cal.png" property="og:image" />
+<meta name="keywords" content="calculator, math, tools, web, easy">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content="3kh0 at GitHub">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+    <title>Calculator | 3kh0</title>
+  <link rel="stylesheet" href="styles/light.css" id="theme" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Calculator</h1>
+
+      <div class="first-row">
+        <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+        <input type="button" value="C" onclick="clearScreen()" id="clear" />
+      </div>
+      <div class="second-row">
+        <input type="button" value="1" onclick="liveScreen(1)" id="one" />
+        <input type="button" value="2" onclick="liveScreen(2)" id="two" />
+        <input type="button" value="3" id="three" onclick="liveScreen(3)" />
+        <input type="button" value="+" onclick="liveScreen('+')" />
+      </div>
+      <div class="third-row">
+        <input type="button" value="4" id="four" onclick="liveScreen(4)" />
+        <input type="button" value="5" id="five" onclick="liveScreen(5)" />
+        <input type="button" value="6" id="six" onclick="liveScreen(6)" />
+        <input type="button" value="-" onclick="liveScreen('-')" />
+      </div>
+      <div class="fourth-row">
+        <input type="button" value="7" id="seven" onclick="liveScreen(7)" />
+        <input type="button" value="8" id="eight" onclick="liveScreen(8)" />
+        <input type="button" value="9" id="nine" onclick="liveScreen(9)" />
+        <input type="button" value="x" onclick="liveScreen('*')" />
+      </div>
+      <div class="fifth-row">
+        <input type="button" value="/" onclick="liveScreen('/')" />
+
+        <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
+        <input type="button" value="." class="dot" onclick="liveScreen('.')" />
+        <input type="button" value="=" onclick="result.value = eval(result.value)" />
+      </div>
+       
+      <div class="bottom-buttons">
+        <a href="https://github.com/3kh0/calculator"><i class="fab fa-github"></i>
+          Source</a>
+        <button onclick="changeTheme()" id="dark-mode">
+          Dark Mode 🌙
+        </button>
+      </div>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5502194389395403"
+   crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+   style="display:block; text-align:center;"
+   data-ad-layout="in-article"
+   data-ad-format="fluid"
+   data-ad-client="ca-pub-5502194389395403"
+   data-ad-slot="2411426482"></ins>
+<script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+  </div>
+  <!-- Fontawesome Script -->
+  <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
