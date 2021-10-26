@@ -1,0 +1,242 @@
+
+<!doctype html>
+<html>
+<head> 
+	<link rel="icon" sizes="192x192" href="https://i.ibb.co/J59P0h4/58097612.jpg">
+ <link rel="shortcut icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+ <link rel="apple-touch-icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+    <title>The Pacman Game</title>
+    <meta name="description" content="Click and play the game, learn more about pacman." />
+    <meta name="keywords" content="pacman, pac-man, cookie man, cookie-man, ms pacman, ms pac-man">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <!-- Allow page to be saved as web app on iOS. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Hide status bar -->
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- icon used for iOS Web App -->
+    <link rel="apple-touch-icon-precomposed" href="icon/ios_icon.png" />
+
+    <link rel="icon" type="image/png" href="icon/favicon.png" />
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+        }
+
+
+        @media (min-width:801px) {
+            #canvas {
+                background-position-x: 50%;
+                background-size: 20%;
+                min-height: 100vh;
+            }
+        }
+
+        @media (max-width:801px) {
+            #about-game p{
+                font-size: 1.2em;
+            }
+            #about-game h1{
+                font-size: 1.1em !important;
+            }
+            #about-game h2{
+                font-size: 1.2em !important;
+            }
+        }
+
+        #about-game {
+            background: #fff;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+
+        #about-game h1,
+        #about-game h2 {
+            font-family: 'ArcadeR';
+            color: #f08625;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        #about-game h1{
+            font-size: 1em;
+        }
+
+        #about-game p {
+            font-family: 'Arial';
+        }
+
+        .splitter {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        @font-face {
+            font-family: 'ArcadeR';
+            src: url('font/ARCADE_R.TTF');
+            /*
+            src: url('font/PressStart2P.ttf');
+            */
+        }
+
+        #canvas-warning {
+            color: #FF0;
+            font-size: 1.5em;
+        }
+        .start-btn{
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'ArcadeR';
+    margin: 20px auto;
+    display: block;
+    width: 209px;
+}
+
+
+.video-game-button:active, .start-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+    </style>
+
+    
+</head>
+
+
+<body>
+    <div style="text-align: center; margin-top: 50px; margin-left: 50px; margin-right: 50px;" >
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-1535937662065368"
+    data-ad-slot="2438208611"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+    <div style='font-family: ArcadeR'> </div>
+    <a class='start-btn' href="/">HOME</a>
+    <div id="about-game">
+        <h1>Free Version of PacMan game online!</h1>L<br>
+	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5502194389395403"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-5502194389395403"
+     data-ad-slot="4975843246"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        
+        <article>
+            
+            <p><a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank">Pacman</a>
+                is a fun game that has been around for almost 4 decades. Created in 1980, the idea behind this
+                game is super simple. And that’s maybe the major reason why it is so popular even today, many more
+                decades after its inception.
+            </p>
+            <p>The thing that a lot of people like about action and <strong>arcade games</strong> is that they
+                are always fun and they bring in a new perspective on the way you play.</p>
+
+            <h2>How to play Pacman?</h2>
+            <p>With Pacman you really get all of that. The idea here is that you are the hero in a maze and you have
+                to eliminate all the enemies as fast as possible.
+                You must do that as quickly as you can, otherwise you will lose the game and you definitely want to
+                avoid such a thing as much as possible.
+            </p>
+            <p>
+                The thing to keep in mind about <strong>Pacman</strong> is that you have to collect all the bubbles on
+                the game board in order to complete the game.</p>
+
+            <p>And while you do that you also need to figure out a way to avoid all those ghosts that are coming to get
+                you.
+                The ability to <strong>play Pacman</strong> is really exciting because you are free to choose whatever
+                route you want.
+                And the <strong>Pacman online experience</strong> brings you so many different options all the time.
+                You never get to have the same gameplay, even if the game is quite distinct and unique.
+                It’s all about being creative and having fun here, which is exactly what you need.</p>
+
+            <h2>Why should you play Pacman online?</h2>
+            <p>The first thing you will like is that this is <strong>Pacman unblocked</strong>. There’s no need to
+                worry about any limits or anything like that,
+                you can instead play this anywhere you want and on whatever device. And it will be more than impressive
+                every time. </p>
+            <p>Plus, if you play Pacman online you can enjoy the game <strong>free of charge</strong>. And that’s
+                maybe the best thing in here.
+                It really is something cool and different and it offers you an enticing array of unique benefits for
+                you to explore regardless of the situation.</p>
+
+            <h2>Are there any Pacman strategies?</h2>
+            <p>When you enter the <strong>Pacman play world</strong>, you really have everything under control.
+                You can choose when and how to play and you can just have fun with it.
+                The idea here is to understand what you are getting into and actively focus on a fun experience all the
+                time.
+                The challenge with this game is that every variant is unique, so the strategies can shift.
+                But then again that’s what really makes the title so interesting and intense in its own right.</p>
+            <p>If you love <strong>arcade games</strong> and you want some old school gaming in your life, check out
+                Pacman.
+                This is a great title with something new and super rewarding all the time.
+                You will be incredibly happy with the way everything works and the outcome can indeed be a cool one no
+                matter the situation.
+                We encourage you to check out <strong>Pacman online</strong> right now if you want a fun little arcade
+                experience in your life!
+                
+                Anyway it's <strong>Pacman 30th anniversary</strong> and it's worth trying at least!
+                </p>
+                <p>
+                P.S. a few tips for our game.
+                <ul>
+                    <li>
+                        If you don't like sound while playing pacman you can mute it in game settings and play old pacman game without sound!
+                    </li>
+                    <li>
+                        All game versions are playable on mobile and desktop
+                        </li>
+                        <li>
+                            All game versions are in full screen. So you can play pacman and ms pacman on fullscreen mode, even on mobile!
+
+                            </li>
+                    </ul>
+                </p>
+                </article>
+        
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5502194389395403"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-5502194389395403"
+     data-ad-slot="4975843246"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+        <hr class="splitter" />
+
+        <a class='start-btn' href="play.html">PLAY</a>    
+        <br><br><br><br>
+    </div>
+</body>
+</html>

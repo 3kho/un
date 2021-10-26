@@ -1,0 +1,246 @@
+
+<!doctype html>
+<html>
+ <link rel="icon" sizes="192x192" href="https://i.ibb.co/J59P0h4/58097612.jpg">
+ <link rel="shortcut icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+ <link rel="apple-touch-icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+<head>
+
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script>(function (a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y; h.start = 1 * new Date;
+            h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+            (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+            { 'GTM-THP4NGZ': true });</script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-THP4NGZ');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <title>Original Pacman game online!</title>
+    <meta name="description" content="Click and Play. No download or registration needed." />
+    <meta name="keywords" content="pacman, pac-man, cookie man, cookie-man, ms pacman, ms pac-man">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <!-- Allow page to be saved as web app on iOS. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Hide status bar -->
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- icon used for iOS Web App -->
+    <link rel="apple-touch-icon-precomposed" href="icon/ios_icon.png" />
+
+    <link rel="icon" type="image/png" href="icon/favicon.png" />
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+        }
+
+
+        @media (min-width:801px) {
+            #canvas {
+                background-position-x: 50%;
+                background-size: 20%;
+                min-height: 100vh;
+            }
+        }
+
+        @media (max-width:801px) {
+            #about-game p {
+                font-size: 1.2em;
+            }
+
+            #about-game h1 {
+                font-size: 1.1em !important;
+            }
+
+            #about-game h2 {
+                font-size: 1.2em !important;
+            }
+        }
+
+        #about-game {
+            background: #fff;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+
+        #about-game h1,
+        #about-game h2 {
+            font-family: 'ArcadeR';
+            color: #f08625;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        #about-game h1 {
+            font-size: 1em;
+        }
+
+        #about-game p {
+            font-family: 'Arial';
+        }
+
+        .splitter {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        @font-face {
+            font-family: 'ArcadeR';
+            src: url('font/ARCADE_R.TTF');
+            /*
+            src: url('font/PressStart2P.ttf');
+            */
+        }
+
+        #canvas-warning {
+            color: #FF0;
+            font-size: 1.5em;
+        }
+
+        .start-btn {
+            text-align: center;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+            padding: 10px 0 10px 10px;
+            background-color: lightgray;
+            text-shadow: -1px -1px black, 1px 1px white;
+            color: gray;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            -o-border-radius: 7px;
+            border-radius: 7px;
+            box-shadow: 0 .2em gray;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'ArcadeR';
+            margin: 20px auto;
+            display: block;
+            width: 209px;
+        }
+
+
+        .video-game-button:active,
+        .start-btn:active {
+            box-shadow: none;
+            position: relative;
+            top: .2em;
+        }
+
+        .html5-container {
+            margin: 0 auto;
+            width: fit-content;
+            position: relative;
+            display: inline-block;
+        }
+
+        iframe {
+            border: none !important;
+        }
+
+        .blocker {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            background: transparent;
+        }
+
+        .linkwrap iframe {
+            z-index: 2;
+        }
+
+        #game_banner {
+            display: inline-block;
+        }
+
+        #adwrapper p {
+            color: yellow;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+
+<body>
+
+    <div style='font-family: ArcadeR'> </div>
+    <a class='start-btn' href="play.html">CLICK TO PLAY</a>
+    <div id="about-game">
+        <h1>Pacman game online! - ORIGINAL</h1>
+        <a href="about-pacman.html">About Pacman</a> |
+        <a href="pacman-tips.html">Pacman Hacks</a> |
+        <a href="ms-pacman.html">Ms Pacman</a> |
+        <a href="pacman-ghosts.html">Pacman Ghosts</a> |
+        <a href="arcade-games.html">Arcade Games</a>
+
+
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; margin-left: 50px; margin-right: 50px;" >
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1535937662065368"
+            data-ad-slot="7595391862"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!--
+    <div style="text-align: center; margin-top: 25px;" id="adwrapper">
+        <p style="
+        color: wheat;
+        font-size: 31px;
+    ">Love World War II Games? Click Bellow and Try War Thunder!</p>
+
+
+        <div class="html5-container">
+
+            <a href="http://www.adtogametrk.com/2PLFG38/9GG2SS/?sub1=v1" 
+            id="game_banner" class="game_banner" target="_blank">
+
+                <img src="btn_en.png"  alt="play game button" />
+                
+            </a>
+            <br>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/0rNHF2hv2_I/?autoplay=1" 
+                frameborder="0" ></iframe>
+
+
+        </div>
+        -->
+    </div>
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c6d230ffff369d6"></script>
+</body>
+</html>
