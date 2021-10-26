@@ -1,0 +1,127 @@
+
+/* Set a default font family for all elements */
+body {
+	background-color: #eee;
+	font-family: 'Patrick Hand SC', cursive;
+}
+
+h2 {
+	color: blue;
+}
+
+table.scoreboard tr td {
+	text-align: center;
+	min-width: 100px;
+	color: blue;
+	font-weight: bold;
+}
+
+/* Define gradient for the board (table) */
+table.board {
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(blue, purple); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(blue, purple); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(blue, purple); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(blue, purple); /* Standard syntax */
+	border-radius: 5px;
+}
+
+/* The width and height are set based on the size of icons */
+table.board tr td {
+	background-repeat: no-repeat;
+	text-align: center;
+	height: 100px; 
+	width: 100px;
+	cursor: pointer;
+	font-size: 0;
+	border: 1px solid #aab9ff;
+	border-radius: 5px;
+}
+
+/* This class is used by the winnerMessageBox and the playAgainButton */
+.hiddenMessages {
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(blue, purple); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(blue, purple); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(blue, purple); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(blue, purple); /* Standard syntax */
+	color: white;
+	border: 0px solid white;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	display: none;
+	font-size: 18px;
+}
+
+/* Small changes specific for the winnerMessageBox */
+#winnerMessageBox {
+	width: 300px;
+}
+
+/* Small changes specific for the playAgainButton */
+#playAgainButton {
+	cursor: pointer;
+	padding: 5px 50px;
+	font-family: 'Patrick Hand SC', cursive;
+}
+
+/* Change the color */
+#playAgainButton:hover {
+	background: purple; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(purple, blue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(purple, blue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(purple, blue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(purple, blue); /* Standard syntax */
+}
+
+/* The height should be set based on the content */
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+}
+
+/* Change the heart icon color to red */
+#heart-icon {
+	color: red;
+}
+
+/* Remove the links underline and set its color to blue */
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+#difficulty-select {	
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(blue, purple); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(blue, purple); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(blue, purple); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(blue, purple); /* Standard syntax */
+	color: black;
+	border: 0px solid white;
+	border-radius: 5px;
+	padding: 2px;
+	font-size: 16px;
+	font-family: 'Patrick Hand SC', cursive;
+}
+
+#difficulty-select option {
+   color: black;
+}
+
+#difficulty-select:not(:checked) {
+   color: white;
+}
+
+#difficulty-label {
+	color: blue;
+	font-size: 20px;
+}
+
+#difficulty-block {
+	margin-bottom: 10px;
+}
