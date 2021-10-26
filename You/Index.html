@@ -1,0 +1,25 @@
+ <center>
+    	<input placeholder="Put Youtube Link Here" type="text" id="input-box">
+	    <button class="button" onclick="generate()">Generate</button>
+	    <iframe id="video-frame" style="display:none;" width="1280" height="720" id="video-frame" src="https://www.youtube.com/embed/BX7j1QX836c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    <script src="script.js"></script>
+    </center>
+
+    <script>
+    	window.addEventListener('keydown', function (e) {
+            if(e.key == "`")
+            {
+				window.open('https://classroom.google.com/u/0/h', '_blank');
+            }
+		}, false);
+    </script>
+    
+    <script>
+    	function generate() {
+	let iframe = document.getElementById("video-frame");
+	let val = document.getElementById("input-box").value;
+	let id = val.split("https://www.youtube.com/watch?v=")[1].split("&")[0];
+
+	iframe.style = "";
+	iframe.src = "https://www.youtube.com/embed/" + id;
+}
