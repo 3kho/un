@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html>
+   <link rel="icon" sizes="192x192" href="https://i.ibb.co/J59P0h4/58097612.jpg">
+ <link rel="shortcut icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+ <link rel="apple-touch-icon" href="https://i.ibb.co/J59P0h4/58097612.jpg" type="image/x-icon"/>
+<head>
+  <title>Snake | 3kh0</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="snakes.min.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+</head> 
+ 
+<body> 
+
+  <div id="snakes">
+
+    <img src='s.gif' class='watermark top'>
+    <img src='s.gif' class='watermark left'>
+    <img src='s.gif' class='watermark right'>
+
+    <div id='sound' class='on' title='toggle music and fx' style='display:none;'></div>
+
+    <div id="score">
+      <span class="current"><span class='label'>Score: </span><span class="value">000000</span></span>
+      <span class="high"><span class='label'>High: </span><span class="value">000000</span></span>
+    </div>
+
+    <canvas id="canvas">
+      <div class='unsupported'>
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+
+    <div id="overlay">
+
+      <img id="logo" src="images/logo.png">
+
+      <div id="loading" class='menu' style='display:none;'>
+        <h1>Loading...</h1>
+      </div>
+
+      <div id="highscores" class='menu' style='display:none;'>
+        <h1>High Scores</h1>
+        <ul></ul>
+      </div>
+
+      <div id="credits" class='menu' style='display:none;'>
+        <ul>
+          <li class='author'>Created by <a target="_credits" href="/">3kh0</a></li>
+          <li><span class='key'>            Idea </span> <a class='value' target="_credits" href="/">Jake S</a></li>
+          <li><span class='key'>           Fonts </span> <a class='value' target="_credits" href="http://www.dafont.com/sf-fedora.font">SF Fedora</a></li>
+          <li><span class='key'>       Watermark </span> <a class='value' target="_credits" href="http://www.istockphoto.com/file_closeup.php?id=4788598">VichanChairat</a></li>
+          <li><span class='key'>           Music </span> <a class='value' target="_credits" href="http://luckylionstudios.com/royalty-free-video-game-music-library/">Lucky Lion Studios</a></li>
+          <li><span class='key'>        Sound FX </span> <a class='value' target="_credits" href="http://www.premiumbeat.com/">Premium Beat</a></li>
+          <li><span class='key'>     JS selector </span> <a class='value' target="_credits" href="http://sizzlejs.com/">Sizzle</a></li>
+          <li><span class='key'>     Source code </span> <a class='value' target="_credits" href="https://github.com/3kh0/snake">GitHub</a></li>
+        </ul>
+         <span class='key'>Thank you for playing my game!</span><br>
+      </div>
+    </div>
+
+    <div id="help">
+      ( use the arrow and enter keys for control )
+    </div>
+
+  </div>
+
+  <script src="snakes.min.js"></script>
+  <script>
+  Game.ready(function() {
+    game = Snakes();
+  });
+  </script>
+
+ </body> 
+</html>
